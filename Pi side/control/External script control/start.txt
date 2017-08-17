@@ -1,0 +1,16 @@
++++ readlink -f ./start.sh
+++ dirname /home/pi/Desktop/Senior Design 2/Control/External script control/start.sh
++ cd /home/pi/Desktop . 2/Control . control
++ source ./config.txt
++ fn_stop
++ sudo killall raspimjpeg
++ sudo killall php
++ sudo killall motion
++ sudo mkdir -p /dev/shm/mjpeg
++ sudo chown www-data:www-data /dev/shm/mjpeg
++ sudo chmod 777 /dev/shm/mjpeg
++ sleep 1
++ sudo su -c 'raspimjpeg > /dev/null &' www-data
++ '[' -e /etc/debian_version ']'
++ sleep 1
++ sudo su -c 'php /var/www//schedule.php > /dev/null &' www-data

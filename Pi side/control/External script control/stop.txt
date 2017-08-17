@@ -1,0 +1,8 @@
++++ readlink -f ./stop.sh
+++ dirname /home/pi/Desktop/Senior Design 2/script test/stop.sh
++ cd /home/pi/Desktop . 2 test
++ source ./config.txt
++ fn_stop
++ sudo killall raspimjpeg
++ sudo killall php
++ sudo killall motion
